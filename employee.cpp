@@ -130,7 +130,7 @@ HighFink::HighFink(const std::string& fn, const std::string& ln,
 HighFink::HighFink(const AbstractEmployee& e, const std::string& rpo, int ico)
     : AbstractEmployee(e), Manager(e, ico), Fink(e, rpo) {}
 
-HighFink::HighFink(const Fink& f, int ico) : AbstractEmployee(), Fink(f), Manager(f, ico) {}
+HighFink::HighFink(const Fink& f, int ico) : AbstractEmployee(), Manager(f, ico), Fink(f) {}
 
 HighFink::HighFink(const Manager& m, const std::string& rpo)
     : AbstractEmployee(m), Manager(m), Fink(m, rpo) {}
